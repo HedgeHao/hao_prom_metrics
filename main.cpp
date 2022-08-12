@@ -36,6 +36,10 @@ void parseArgument(int argc, char **argv, Config *config)
         {
             config->interval = std::atoi(getNextArg(argc, argv, ++index).c_str());
         }
+        else if (arg == "-l" || arg == "--log-level")
+        {
+            config->logLevel = std::atoi(getNextArg(argc, argv, ++index).c_str());
+        }
         else
         {
             printHelp = true;

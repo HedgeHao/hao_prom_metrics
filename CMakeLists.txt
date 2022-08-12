@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.9)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.3)
 
-project( hao_node_exporter CXX )
+PROJECT( hao_prom_metrics CXX )
 
-add_executable( ${PROJECT_NAME} main.cpp )
+SET(CMAKE_CXX_FLAGS "-std=c++17 ${CMAKE_CXX_FLAGS}")
 
-target_link_libraries(${PROJECT_NAME} curl)
+ADD_EXECUTABLE( ${PROJECT_NAME} main.cpp )
+
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} curl)
